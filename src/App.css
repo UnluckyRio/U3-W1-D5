@@ -1,1 +1,79 @@
+/* Stili generali */
+body {
+  background-color: #141414;
+  color: #ffffff;
+}
 
+/* Stili Navbar */
+.netflix-navbar {
+  background-color: #000000 !important;
+  padding: 1rem 0;
+}
+
+.netflix-navbar .navbar-brand img {
+  transition: transform 0.2s;
+}
+
+.netflix-navbar .navbar-brand img:hover {
+  transform: scale(1.1);
+}
+
+.netflix-navbar .nav-link {
+  color: #e5e5e5 !important;
+  margin: 0 10px;
+  transition: color 0.3s;
+}
+
+.netflix-navbar .nav-link:hover {
+  color: #ffffff !important;
+}
+
+/* Stili MovieGallery */
+.movie-gallery {
+  margin: 2rem 0;
+}
+
+.movie-card {
+  transition: transform 0.3s;
+  cursor: pointer;
+  border: none;
+  overflow: hidden;
+}
+
+.movie-card:hover {
+  transform: scale(1.05);
+}
+
+.movie-poster {
+  height: 300px;
+  object-fit: cover;
+}
+
+/* Stili Footer */
+footer {
+  background-color: #000000 !important;
+  padding: 3rem 0;
+  margin-top: 3rem;
+}
+
+footer h5 {
+  color: #e5e5e5;
+  margin-bottom: 1.5rem;
+}
+
+footer ul li {
+  color: #757575;
+  margin-bottom: 0.5rem;
+  cursor: pointer;
+  transition: color 0.3s;
+}
+
+footer ul li:hover {
+  color: #ffffff;
+}
+
+/* Stili per il loader */
+.spinner-border {
+  width: 3rem;
+  height: 3rem;
+}
