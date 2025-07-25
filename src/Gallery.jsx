@@ -47,7 +47,16 @@ const Gallery = ({ saga }) => {
             className="mb-2 text-center px-1"
           >
             <Card>
-              <Card.Img variant="top" src={movie.Poster} alt={movie.Title} />
+              {/* Controllo che movie.Poster sia una stringa valida, altrimenti mostro un placeholder */}
+              <Card.Img
+                variant="top"
+                src={
+                  typeof movie.Poster === "string" && movie.Poster !== "N/A"
+                    ? movie.Poster
+                    : "https://via.placeholder.com/300x445?text=No+Image"
+                }
+                alt={movie.Title}
+              />
               <Card.Body>
                 <Card.Title style={{ fontSize: "1em" }}>
                   {movie.Title}

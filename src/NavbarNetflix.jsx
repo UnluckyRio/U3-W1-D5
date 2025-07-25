@@ -2,6 +2,8 @@
 import React from "react";
 import { Navbar, Nav, Container, NavDropdown } from "react-bootstrap";
 import { Link } from "react-router-dom"; // Importo Link per la navigazione
+// Importo il logo come modulo, così React lo gestisce correttamente
+import logo from "./assets/logo.png";
 
 const NavbarNetflix = () => {
   return (
@@ -15,8 +17,9 @@ const NavbarNetflix = () => {
       <Container fluid>
         {/* Logo Netflix */}
         <Navbar.Brand as={Link} to="/">
+          {/* Logo Netflix importato come modulo, necessario per React/Vite */}
           <img
-            src="/assets/logo.png"
+            src={logo} // Uso la variabile logo che contiene il path corretto
             alt="Logo"
             style={{ width: "100px", height: "55px" }}
           />
