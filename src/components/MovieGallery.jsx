@@ -1,5 +1,5 @@
-import React from 'react';
-import { Row, Col, Card } from 'react-bootstrap';
+import React from "react";
+import { Row, Col, Card } from "react-bootstrap";
 
 const MovieGallery = ({ title, movies }) => {
   return (
@@ -8,18 +8,21 @@ const MovieGallery = ({ title, movies }) => {
       <Row className="g-4">
         {movies.map((movie) => (
           <Col key={movie.imdbID} xs={12} sm={6} md={4} lg={3} xl={2}>
-            <Card className="h-100 bg-dark text-light movie-card">
-              <Card.Img
-                variant="top"
-                src={movie.Poster !== 'N/A' ? movie.Poster : 'https://via.placeholder.com/300x450'}
+            <div className="position-relative movie-card ">
+              <img
+                src={
+                  movie.Poster !== "N/A"
+                    ? movie.Poster
+                    : "https://via.placeholder.com/300x450"
+                }
                 alt={movie.Title}
-                className="movie-poster"
+                className="w-100 rounded movie-poster "
               />
-              <Card.Body>
-                <Card.Title className="text-truncate">{movie.Title}</Card.Title>
-                <Card.Text className="text-muted">{movie.Year}</Card.Text>
-              </Card.Body>
-            </Card>
+              <div className="movie-info position-absolute bottom-0 start-0 w-100 p-2 text-white bg-dark bg-opacity-75 rounded-bottom ">
+                <h6 className="mb-1 text-truncate">{movie.Title}</h6>
+                <small className="text-muted">{movie.Year}</small>
+              </div>
+            </div>
           </Col>
         ))}
       </Row>

@@ -1,7 +1,15 @@
 /* Stili generali */
-body {
-  background-color: #141414;
+body, html {
+  background-color: #212529;
   color: #ffffff;
+  min-height: 100vh;
+  margin: 0;
+  padding: 0;
+}
+
+/* Imposta il colore di sfondo per tutti i div */
+div {
+  background-color: #212529;
 }
 
 /* Stili Navbar */
@@ -33,20 +41,42 @@ body {
   margin: 2rem 0;
 }
 
+.movie-gallery h2 {
+  color: #ffffff;
+  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5);
+}
+
 .movie-card {
-  transition: transform 0.3s;
+  transition: all 0.3s ease;
   cursor: pointer;
-  border: none;
+  position: relative;
   overflow: hidden;
 }
 
 .movie-card:hover {
-  transform: scale(1.05);
+  transform: scale(1.1);
+  z-index: 2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.5);
 }
 
 .movie-poster {
   height: 300px;
   object-fit: cover;
+  transition: all 0.3s ease;
+}
+
+.movie-info {
+  transform: translateY(100%);
+  transition: transform 0.3s ease;
+  background: linear-gradient(to top, rgba(0, 0, 0, 0.9), rgba(0, 0, 0, 0));
+}
+
+.movie-card:hover .movie-info {
+  transform: translateY(0);
+}
+
+.movie-card:hover .movie-poster {
+  filter: brightness(0.7);
 }
 
 /* Stili Footer */
@@ -76,4 +106,76 @@ footer ul li:hover {
 .spinner-border {
   width: 3rem;
   height: 3rem;
+}
+
+/* Stili per elementi di sfondo */
+.bg-light {
+  background-color: #212529 !important;
+}
+
+.list-group-item {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  border-color: #373b3e !important;
+}
+
+.card {
+  background-color: #212529 !important;
+  border-color: #373b3e !important;
+}
+
+.dropdown-menu {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+}
+
+.dropdown-item:hover {
+  background-color: #373b3e !important;
+}
+
+.form-control, .form-select {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  border-color: #373b3e !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  border-color: #0d6efd !important;
+  box-shadow: 0 0 0 0.25rem rgba(13, 110, 253, 0.25) !important;
+}
+
+.modal-content {
+  background-color: #212529 !important;
+  color: #ffffff !important;
+  border-color: #373b3e !important;
+}
+
+.modal-header, .modal-footer {
+  border-color: #373b3e !important;
+}
+
+.dropdown-item {
+  color: #ffffff !important;
+}
+
+.dropdown-item:hover {
+  background-color: #373b3e !important;
+}
+
+.form-control, .form-select {
+  background-color: #212529 !important;
+  border-color: #373b3e !important;
+  color: #ffffff !important;
+}
+
+.form-control:focus, .form-select:focus {
+  background-color: #212529 !important;
+  color: #ffffff !important;
 }
