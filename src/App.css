@@ -7,11 +7,6 @@ body, html {
   padding: 0;
 }
 
-/* Imposta il colore di sfondo per tutti i div */
-div {
-  background-color: #212529;
-}
-
 /* Stili Navbar */
 .netflix-navbar {
   background-color: #000000 !important;
