@@ -1,6 +1,7 @@
 import React from "react";
 import { Navbar, Nav, Container } from "react-bootstrap";
 import { Link } from "react-router-dom";
+import SearchBar from "./components/SearchBar";
 import "./App.css";
 
 // Componente Navbar personalizzato per Netflix
@@ -35,6 +36,11 @@ const NavbarNetflix = () => {
               Nuovi e popolari
             </Nav.Link>
           </Nav>
+
+          {/* SearchBar */}
+          <div className="mx-3" style={{ minWidth: '300px' }}>
+            <SearchBar onSearch={(term) => console.log('Ricerca:', term)} />
+          </div>
 
           {/* Menu utente */}
           <Nav>
